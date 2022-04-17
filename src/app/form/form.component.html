@@ -1,0 +1,16 @@
+<form ngSubmit="submitFood()">
+    <label for ="FoodName">FoodName</label>
+        <!-- <input type="text" name="{{name}}" value="" placeholder="> -->
+    <input type="text" name="name" placeholder="Food" [(ngModel)]="meal.name" value="">
+
+    <label for ="calories">Calories</label>
+        <!-- <input type="text" name="{{type}}" value="" placeholder="> -->
+
+    <input type="text" name="calories" placeholder="Calories" [(ngModel)]="meal.calories" value="">
+    <label for="food Details">Food Details</label>
+
+    <input type="text" name="description" [(ngModel)]="meal.description" value="" placeholder="Food Details">
+
+    <button type="Submit">Add Food</button>
+
+</form>

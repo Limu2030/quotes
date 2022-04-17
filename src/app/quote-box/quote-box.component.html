@@ -1,17 +1,45 @@
+
 <div id="quote-box">
     <h1 id="text"><i class="fa fa-quote-left"></i> {{ quote }}</h1>
     <p id="author">- {{ author }}</p>
     <div class="btn-row">
+      <!-- <button class="btn btn-primary" id="like" (click)="upvote()">
+        upvotes
+      </button>
+      <button class="btn btn-primary" id="dislike" (click)="downvote()">
+        downvotes
+      </button> -->
+      <button class="btn btn-primary "  id="delete" (click)="deleteQuote(true)">
+        Like quote <i class="fa-solid fa-thumbs-up"></i>
+      </button>
+      <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
+        Disike quote
+      </button>
       <button class="btn btn-primary" id="new-quote" (click)="getNewQuote()">
         New quote
       </button>
-      <a
+      <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
+        Delete quote
+      </button>
+
+      <!-- <a
         id="tweet-quote"
         href="{{ tweetURL }}"
         target="_top"
         class="btn btn-secondary"
       >
         <i class="fa fa-twitter"></i> Tweet
-      </a>
+      </a> -->
+
+      <!-- <ul *ngFor= "let quote of votes">
+        <li>{{votes}}</li>
+
+      </ul> -->
+    <!-- <h6 class="card-subtitle mb-2 text-muted"> - {{quoty.author}} <span id="when">Posted: {{quoty.datePosted|datePipe}} days ago.</span> </h6>
+    <div class="container-fluid" id="buttons">
+    <button class="btn btn-sm btn-success" (click)='upvotes()'>{{quoty.likes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
+    <button class="btn btn-sm hate" id="hate" (click)='downvotes()'>{{quoty.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
+    <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button>  -->
+<!-- </div> -->
     </div>
   </div>
