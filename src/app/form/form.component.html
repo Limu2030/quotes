@@ -1,16 +1,42 @@
-<form ngSubmit="submitFood()">
-    <label for ="FoodName">FoodName</label>
-        <!-- <input type="text" name="{{name}}" value="" placeholder="> -->
-    <input type="text" name="name" placeholder="Food" [(ngModel)]="meal.name" value="">
+<form ngSubmit="submitQuote()">
+  <div class="form-group ">
+    <label for="quote">Drop a quote in the box</label>
+    <input
+      required="quote"
+      type="text"
+      name="quote"
+      placeholder="quote"
+      [(ngModel)]="drop.quote"
+      value="quote"
+    />
+    <div class="alert alert-danger" *ngIf="">
+      quote is required
+    </div>
+  </div>
+  <div class="form-group ">
+    <label for="author">Author of the quote</label>
+  
+    <input
+      type="text"
+      name="author"
+      placeholder="author"
+      [(ngModel)]="drop.author"
+      value=""
+    />
+  </div>
+  <div class="form-group"> 
+    <label for="name">Your name</label>
 
-    <label for ="calories">Calories</label>
-        <!-- <input type="text" name="{{type}}" value="" placeholder="> -->
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="drop.name"
+      value=""
+      placeholder="name"
+    />
+  </div>
 
-    <input type="text" name="calories" placeholder="Calories" [(ngModel)]="meal.calories" value="">
-    <label for="food Details">Food Details</label>
+  
 
-    <input type="text" name="description" [(ngModel)]="meal.description" value="" placeholder="Food Details">
-
-    <button type="Submit">Add Food</button>
-
+  <button class="btn btn-primary" type="Submit">Add Quote</button>
 </form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meals } from '../votes';
+import { Drop } from '../votes';
 
 
 @Component({
@@ -8,10 +8,10 @@ import { Meals } from '../votes';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  meal!:Meals
+  drop!:Drop
   
 
-submitFood(){
+submitQuote(){
 
 }
   constructor() { }

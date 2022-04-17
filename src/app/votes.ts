@@ -10,13 +10,13 @@ export class Votes {
         this.downvotes = downvotes;
     }
 }
-export class Meals {
+export class Drop {
+    quote: string;
+    author: number;
     name: string;
-    calories: number;
-    description: string;
-    constructor(name:string, calories:number, description:string){
+    constructor(quote:string, author:number, name:string){
+        this.quote = quote;
+        this.author = author;
         this.name = name;
-        this.calories = calories;
-        this.description = description;
     }
 }
