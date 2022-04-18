@@ -1,17 +1,5 @@
-<app-form (addQuote)="addNewQuote($event)"></app-form>
 
 
-<div *ngFor="let quote of quotes" id="quote-box">
-  <h1 id="text"><i class="fa fa-quote-left"></i> {{ quote.quote }}</h1>
-  <p id="author">- {{ quote.author }}</p>
-<div class="btn-row">
-  <app-likes [quote]="quote"></app-likes>
-  <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
-    Delete quote
-  </button>
-
-</div>
-</div>
 <div id="quote-box">
     <h1 id="text"><i class="fa fa-quote-left"></i> {{ vote }}</h1>
     <p id="author">- {{ author }}</p>
@@ -22,18 +10,18 @@
       <button class="btn btn-primary" id="dislike" (click)="downvote()">
         downvotes
       </button> -->
-      <button class="btn btn-primary " mx-10 id="delete" (click)="deleteQuote(true)">
+      <!-- <button class="btn btn-primary " mx-10 id="delete" (click)="deleteQuote(true)">
         Like quote <i class="fa-solid fa-thumbs-up"></i>
       </button>
       <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
         Disike quote
-      </button>
+      </button> -->
       <button class="btn btn-primary" id="new-quote" (click)="getNewQuote()">
         New quote
       </button>
-      <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
+      <!-- <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
         Delete quote
-      </button>
+      </button> -->
 
       <!-- <a
         id="tweet-quote"
@@ -56,8 +44,19 @@
 <!-- </div> -->
     </div>
   </div>
+  <app-form (addQuote)="addNewQuote($event)"></app-form>
 
+  <div *ngFor="let quote of quotes" id="quote-box">
+    <h1 id="text"><i class="fa fa-quote-left"></i> {{ quote.quote }}</h1>
+    <p id="author">- {{ quote.author }}</p>
+  <div class="btn-row">
+    <app-likes [quote]="quote"></app-likes>
+    <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
+      Delete quote
+    </button>
   
+  </div>
+  </div>
 
   <!-- <div *ngFor="let quote of quotes">
     <h3>{{ quote.id }} - {{ quote.author }}</h3>
