@@ -2,7 +2,7 @@
 
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Votes } from "../votes"; 
+
 
 @Component({
   selector: "app-quote-box",

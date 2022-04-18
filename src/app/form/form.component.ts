@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Drop } from '../votes';
+import { Drop } from '../drop';
 
 
 @Component({
