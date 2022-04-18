@@ -16,7 +16,7 @@ export class LikesComponent implements OnInit {
 
   upvote(){
     this.quote.upvotes++;
-    
+    console.log(this.quote.upvotes)
   }
   downvote(){
     this.quote.downvotes++;
