@@ -13,11 +13,6 @@ export class Votes {
         this.quote = quote;
         this.upvotes = upvotes;
         this.downvotes = downvotes;
-        this.id = id;
-        this.author = author;
-        this.name = name;
-        this.quote = quote;
-        this.upvotes = upvotes;
-        this.downvotes = downvotes;
+        
     }
 }

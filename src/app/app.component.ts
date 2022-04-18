@@ -4,6 +4,9 @@ interface Quote {
   quote: string;
   author: string;
 }
+interface Quote {
+  quote: string;
+  author: string;
 
 @Component({
   selector: "app-root",
