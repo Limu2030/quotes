@@ -12,7 +12,8 @@ import { Votes } from '../votes';
 })
 export class QuoteBoxComponent implements OnInit {
   @Input() author!: string;
-  @Input() quote!: string;
+  @Input() rquote!: Votes;
+  @Input() vote!: string;
   @Input() tweetURL!: string;
   @Input() getNewQuote!: () => void;
   // @Input() quoty: Votes;
@@ -20,12 +21,7 @@ export class QuoteBoxComponent implements OnInit {
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
-  upvote(){
-    this.quote.upvote += 1;
-  }
-  downvote(){
-    this.quote.downvote += 1;
-  }
+  
   constructor() { }
 
   ngOnInit() {
@@ -33,9 +29,9 @@ export class QuoteBoxComponent implements OnInit {
 
   quotes: Votes[] = [
     {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
-    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
-    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
-    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
+    {id: 2, author: 'Nelson Mandela', name: 'Bancy', quote: 'it always seem impossible until it is done', upvotes: 0, downvotes: 0},
+    {id: 1, author: 'Sam G', name: 'Gabriel', quote: 'only a fool thinks it cannot be done', upvotes: 0, downvotes: 0},
+    {id: 1, author: 'Walt Disney', name: 'Lillian', quote: 'the only way to start is to quit talking and begin doing', upvotes: 0, downvotes: 0},
   ]
 
 

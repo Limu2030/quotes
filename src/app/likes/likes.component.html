@@ -1,0 +1,8 @@
+<!-- <p> <strong (click)="upvote()" class="link">Upvote: {{ quote.upvotes }}</strong>  &nbsp;&nbsp; <strong (click)="downvote()" class="link">Downvote: {{ quote.downvotes }}</strong> </p> -->
+
+<button class="btn btn-primary " mx-10 id="up" (click)="upvote()">
+    Like quote: {{ quote.upvotes }} <i class="fa-solid fa-thumbs-up"></i>
+  </button>
+  <button class="btn btn-primary" id="down" (click)="downvote()">
+    Disike quote: {{ quote.downvotes }}
+  </button>

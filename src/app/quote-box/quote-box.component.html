@@ -1,6 +1,19 @@
+<app-form (addQuote)="addNewQuote($event)"></app-form>
 
+
+<div *ngFor="let quote of quotes" id="quote-box">
+  <h1 id="text"><i class="fa fa-quote-left"></i> {{ quote.quote }}</h1>
+  <p id="author">- {{ quote.author }}</p>
+<div class="btn-row">
+  <app-likes [quote]="quote"></app-likes>
+  <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
+    Delete quote
+  </button>
+
+</div>
+</div>
 <div id="quote-box">
-    <h1 id="text"><i class="fa fa-quote-left"></i> {{ quote }}</h1>
+    <h1 id="text"><i class="fa fa-quote-left"></i> {{ vote }}</h1>
     <p id="author">- {{ author }}</p>
     <div class="btn-row">
       <!-- <button class="btn btn-primary" id="like" (click)="upvote()">
@@ -44,11 +57,14 @@
     </div>
   </div>
 
-  <div *ngFor="let quote of quotes">
+  
+
+  <!-- <div *ngFor="let quote of quotes">
     <h3>{{ quote.id }} - {{ quote.author }}</h3>
     <p>{{ quote.quote }}</p>
-    <p> <strong (click)="upvote()" class="link">Upvote: {{ quote.upvotes }}</strong>  &nbsp;&nbsp; <strong (click)="downvote()" class="link">Downvote: {{ quote.downvotes }}</strong> </p>
-  </div>
+    <app-likes [quote]="quote"></app-likes>
+  </div> -->
 
 
-<app-form (addQuote)="addNewQuote($event)"></app-form>
+
+
