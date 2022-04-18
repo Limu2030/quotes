@@ -16,26 +16,7 @@ export class AppComponent  {
   quoteList!: Quote[];
   tweetURL!: string;
   
-//   upvoteFunc(index){
-//     var up=this.quotes[index].upvote+1;
-//     this.quotes[index].upvote=up;
-    
-// }
-//  downvoteFunc(index){
-//     var down=this.quotes[index].downvote+1;
-//     this.quotes[index].downvote=down;
-  
-// }
-// deleteQuote(isDeleted,index){
 
-//   if(isDeleted){
-//     let remove=confirm(`Are you sure you want to delete this ${this.quotes[index].quote}?`)
-//     if(remove){
-//       this.quotes.splice(index,1)
-//     }
-//   }
-
-// }
 
   getNewQuote: () => void = (): void => {
     const idx = Math.floor(Math.random() * this.quoteList.length);

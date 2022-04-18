@@ -1,5 +1,8 @@
 /* $white: #fafafa;
 $black: #3f3f3f; */
+* {
+
+}
 
 #quote-box {
   background-color:white;
