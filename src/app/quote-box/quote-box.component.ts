@@ -20,18 +20,31 @@ export class QuoteBoxComponent implements OnInit {
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
-  // upvote(){
-  //   this.quote.like += 1;
-  // }
-  // downvote(){
-  //   this.quote.dislike += 1;
-  // }
+  upvote(){
+    this.quote.upvote += 1;
+  }
+  downvote(){
+    this.quote.downvote += 1;
+  }
   constructor() { }
 
   ngOnInit() {
   }
 
-  quotes: Votes[] = []
+  quotes: Votes[] = [
+    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
+    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
+    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
+    {id: 1, author: 'John Baptist', name: 'Chris', quote: 'the one who will come after me will be greater', upvotes: 0, downvotes: 0},
+  ]
+
+
+  addNewQuote(quote: Votes){
+    let len = this.quotes.length
+    quote.id = len + 1
+    this.quotes.push(quote)
+    console.log(this.quotes)
+  }
 
 }
 

@@ -45,6 +45,10 @@
   </div>
 
   <div *ngFor="let quote of quotes">
-    <h3>{{ quote.author }}</h3>
+    <h3>{{ quote.id }} - {{ quote.author }}</h3>
     <p>{{ quote.quote }}</p>
+    <p> <strong (click)="upvote()" class="link">Upvote: {{ quote.upvotes }}</strong>  &nbsp;&nbsp; <strong (click)="downvote()" class="link">Downvote: {{ quote.downvotes }}</strong> </p>
   </div>
+
+
+<app-form (addQuote)="addNewQuote($event)"></app-form>
