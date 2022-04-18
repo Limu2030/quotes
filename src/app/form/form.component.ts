@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Drop } from '../drop';
+import { Votes } from '../votes';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -8,11 +10,12 @@ import { Drop } from '../drop';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  drop!:Drop
-  
+
+  newQuote = new Votes(0, "", "","", 0, 0)
+  @Output() addQuote = new EventEmitter<Votes>()
 
 submitQuote(){
-
+ this.addQuote.emit(this.newQuote)
 }
   constructor() { }
 

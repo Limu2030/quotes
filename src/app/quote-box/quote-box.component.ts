@@ -2,6 +2,7 @@
 
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Votes } from '../votes';
 
 
 @Component({
@@ -29,6 +30,8 @@ export class QuoteBoxComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  quotes: Votes[] = []
 
 }
 

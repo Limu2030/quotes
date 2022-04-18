@@ -9,7 +9,7 @@
       <button class="btn btn-primary" id="dislike" (click)="downvote()">
         downvotes
       </button> -->
-      <button class="btn btn-primary "  id="delete" (click)="deleteQuote(true)">
+      <button class="btn btn-primary " mx-10 id="delete" (click)="deleteQuote(true)">
         Like quote <i class="fa-solid fa-thumbs-up"></i>
       </button>
       <button class="btn btn-primary" id="delete" (click)="deleteQuote(true)">
@@ -42,4 +42,9 @@
     <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button>  -->
 <!-- </div> -->
     </div>
+  </div>
+
+  <div *ngFor="let quote of quotes">
+    <h3>{{ quote.author }}</h3>
+    <p>{{ quote.quote }}</p>
   </div>

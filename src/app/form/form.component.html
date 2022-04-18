@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h3>Add your quote form</h3>
-  <form #userForm="ngForm">
+  <form (ngSubmit)="submitQuote()" #userForm="ngForm">
     <div class="form-group ">
       <label>Drop a quote in the box</label>
       <input
@@ -12,7 +12,7 @@
         type="text"
         name="quote"
         placeholder="quote"
-        [(ngModel)]="drop.quote"
+        [(ngModel)]="newQuote.quote"
         value=""
       />
       <div class="alert alert-danger" *ngIf="">
@@ -28,7 +28,7 @@
         type="text"
         name="author"
         placeholder="author"
-        [(ngModel)]="drop.author"
+        [(ngModel)]="newQuote.author"
         value=""
       />
     </div>
@@ -40,7 +40,7 @@
       form-control"
         type="text"
         name="name"
-        [(ngModel)]="drop.name"
+        [(ngModel)]="newQuote.name"
         value=""
         placeholder="name"
       />
@@ -51,4 +51,5 @@
     <button [disabled]="" class="btn btn-primary" type="Submit">Add Quote</button>
   </form>
 </div>
+
 
