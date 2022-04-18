@@ -1,42 +1,54 @@
-<form ngSubmit="submitQuote()">
-  <div class="form-group ">
-    <label for="quote">Drop a quote in the box</label>
-    <input
-      required="quote"
-      type="text"
-      name="quote"
-      placeholder="quote"
-      [(ngModel)]="drop.quote"
-      value="quote"
-    />
-    <div class="alert alert-danger" *ngIf="">
-      quote is required
+<div class="container-fluid">
+  <h3>Add your quote form</h3>
+  <form #userForm="ngForm">
+    <div class="form-group ">
+      <label>Drop a quote in the box</label>
+      <input
+      class="
+      form-control is-invalid"
+        required 
+        #quote="ngModel" [class.is-invalid]="quote.invalid && quote.touched" class="form-control"
+        small
+        type="text"
+        name="quote"
+        placeholder="quote"
+        [(ngModel)]="drop.quote"
+        value=""
+      />
+      <div class="alert alert-danger" *ngIf="">
+        quote is required
+      </div>
     </div>
-  </div>
-  <div class="form-group ">
-    <label for="author">Author of the quote</label>
+    <div class="form-group ">
+      <label>Author of the quote</label>
+    
+      <input
+      class="
+      form-control"
+        type="text"
+        name="author"
+        placeholder="author"
+        [(ngModel)]="drop.author"
+        value=""
+      />
+    </div>
+    <div class="form-group"> 
+      <label>Your name</label>
   
-    <input
-      type="text"
-      name="author"
-      placeholder="author"
-      [(ngModel)]="drop.author"
-      value=""
-    />
-  </div>
-  <div class="form-group"> 
-    <label for="name">Your name</label>
-
-    <input
-      type="text"
-      name="name"
-      [(ngModel)]="drop.name"
-      value=""
-      placeholder="name"
-    />
-  </div>
-
+      <input
+      class="
+      form-control"
+        type="text"
+        name="name"
+        [(ngModel)]="drop.name"
+        value=""
+        placeholder="name"
+      />
+    </div>
   
+    
+  
+    <button [disabled]="" class="btn btn-primary" type="Submit">Add Quote</button>
+  </form>
+</div>
 
-  <button class="btn btn-primary" type="Submit">Add Quote</button>
-</form>

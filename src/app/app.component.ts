@@ -1,5 +1,6 @@
 import { Component, OnInit, } from "@angular/core";
 
+
 interface Quote {
   quote: string;
   author: string;
